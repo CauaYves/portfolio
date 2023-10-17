@@ -1,24 +1,33 @@
 import styled from "styled-components";
-import icon from "../../public/nodejs.svg";
+import icon from "../../../public/nodejs.svg";
+import { useState } from "react";
+import Links from "./links";
 
 export default function NavBar() {
+  const [showSideScreen, setShowSideScreen] = useState(false);
+
   return (
     <Nav>
       <Left>
         <img src={icon.src} alt="icon" />
         <h1>Yves </h1>
       </Left>
-      <Right>
-        <a href="#">Projetos</a>
-        <a href="#">Contato</a>
-        <a href="#">Sobre mim</a>
-      </Right>
 
-      <Burguer>
+      <Links display={"none"} />
+
+      <Burguer
+        onClick={() => {
+          setShowSideScreen(!showSideScreen);
+        }}
+      >
         <span></span>
         <span></span>
         <span></span>
       </Burguer>
+
+      <SideScreen show={showSideScreen}>
+        <Links display={"block"} />
+      </SideScreen>
     </Nav>
   );
 }
@@ -32,6 +41,8 @@ const Nav = styled.nav`
   justify-content: space-between;
 
   background-color: gray;
+
+  position: relative;
 `;
 
 const Left = styled.div`
@@ -39,18 +50,6 @@ const Left = styled.div`
 
   display: flex;
   align-items: center;
-`;
-
-const Right = styled.div`
-  height: 100%;
-
-  display: flex;
-  align-items: center;
-
-  //se a tela for menor que essa tamanho indicado, aplique esses estilos.
-  @media (max-width: 768px) {
-    display: none;
-  }
 `;
 
 const Burguer = styled.div`
@@ -70,5 +69,27 @@ const Burguer = styled.div`
   }
   @media (min-width: 768px) {
     display: none;
+  }
+`;
+
+const SideScreen = styled.div`
+  background-color: #38387844;
+  width: 70%;
+  height: 100vh;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  display: ${(props) => (props.show ? "block" : "none")};
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    a {
+      margin: 15px 0px;
+    }
   }
 `;

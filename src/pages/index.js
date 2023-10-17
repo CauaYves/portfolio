@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import NavBar from "@/components/navbar";
-
 export default function Home() {
   return (
     <Main>
-      <NavBar/>
+      <NavBar />
     </Main>
   );
 }
