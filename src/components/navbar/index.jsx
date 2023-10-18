@@ -81,7 +81,7 @@ const Burguer = styled.div`
 `;
 
 const SideScreen = styled.div`
-  background-color: ${COLORS.sixty};
+  background-color: #262626;
   width: 70%;
   height: 100vh;
 
