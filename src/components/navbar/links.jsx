@@ -1,3 +1,4 @@
+import COLORS from "@/constants/colors";
 import styled from "styled-components";
 
 const Links = ({ display }) => {
@@ -16,6 +17,12 @@ const Main = styled.div`
 
   display: flex;
   align-items: center;
+
+  a {
+    margin-right: 40px;
+    color: ${COLORS.textContrast};
+    text-shadow: 1px 1px 2px #007acc3f;
+  }
 
   //se a tela for menor que essa tamanho indicado, aplique esses estilos.
   @media (max-width: 768px) {

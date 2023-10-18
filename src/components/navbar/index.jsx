@@ -1,17 +1,18 @@
 import styled from "styled-components";
-import icon from "../../../public/nodejs.svg";
+import iconSrc from "../../../public/nodejs.svg";
 import { useEffect, useState } from "react";
 import Links from "./links";
+import COLORS from "@/constants/colors";
+import Image from "next/image";
 
 export default function NavBar() {
   const [showSideScreen, setShowSideScreen] = useState(false);
-  const [atualScreenSize, setAtualScreenSize] = useState(0);
 
   return (
     <Nav>
       <Left>
-        <img src={icon.src} alt="icon" />
-        <h1>Yves </h1>
+        <Image src={iconSrc} alt="icon" width={41} height={45} />
+        <h1>Yves</h1>
       </Left>
 
       <Links display={"none"} />
@@ -41,8 +42,7 @@ const Nav = styled.nav`
   align-items: center;
   justify-content: space-between;
 
-  background-color: gray;
-
+  box-shadow: 4px 5px 9px #6a6a6a25;
   position: relative;
 `;
 
@@ -51,6 +51,13 @@ const Left = styled.div`
 
   display: flex;
   align-items: center;
+  h1 {
+    margin-left: 10px;
+    color: ${COLORS.text};
+  }
+  img {
+    color: red;
+  }
 `;
 
 const Burguer = styled.div`
@@ -62,7 +69,7 @@ const Burguer = styled.div`
 
   span {
     width: 30px;
-    border: 1px solid white;
+    border: 1px solid ${COLORS.thirty};
     margin: 5px;
   }
   @media (max-width: 768px) {
@@ -74,7 +81,7 @@ const Burguer = styled.div`
 `;
 
 const SideScreen = styled.div`
-  background-color: #38387844;
+  background-color: ${COLORS.sixty};
   width: 70%;
   height: 100vh;
 
@@ -93,6 +100,8 @@ const SideScreen = styled.div`
 
     a {
       margin: 15px 0px;
+      color: white;
+      font-weight: 600;
     }
   }
 `;
