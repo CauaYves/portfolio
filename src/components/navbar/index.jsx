@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import icon from "../../../public/nodejs.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Links from "./links";
 
 export default function NavBar() {
   const [showSideScreen, setShowSideScreen] = useState(false);
+  const [atualScreenSize, setAtualScreenSize] = useState(0);
 
   return (
     <Nav>
@@ -80,7 +81,9 @@ const SideScreen = styled.div`
   position: absolute;
   left: 0;
   top: 0;
-
+  @media (min-width: 768px) {
+    display: none;
+  }
   display: ${(props) => (props.show ? "block" : "none")};
 
   div {
