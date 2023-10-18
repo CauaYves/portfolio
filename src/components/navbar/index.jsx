@@ -86,12 +86,14 @@ const SideScreen = styled.div`
   height: 100vh;
 
   position: absolute;
-  left: 0;
+  left: ${(props) => (props.show ? "0" : "-70%")};
   top: 0;
+
+  transition: left 0.5s ease;
+
   @media (min-width: 768px) {
     display: none;
   }
-  display: ${(props) => (props.show ? "block" : "none")};
 
   div {
     display: flex;
