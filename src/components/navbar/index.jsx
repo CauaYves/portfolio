@@ -1,33 +1,51 @@
 import styled from "styled-components";
 import iconSrc from "../../../public/nodejs.svg";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Links from "./links";
-import COLORS from "@/constants/colors";
 import Image from "next/image";
+import { useDarkMode } from "@/context/colors-context"; // Importe o hook useDarkMode
+import sun from "../../../public/sun.svg";
+import moon from "../../../public/moon.svg";
 
 export default function NavBar() {
   const [showSideScreen, setShowSideScreen] = useState(false);
+  const { setDarkMode, colors, darkMode } = useDarkMode(); // Obtenha o estado do modo escuro do contexto
 
   return (
-    <Nav>
-      <Left>
+    <Nav color={colors.sixty}>
+      <Left color={colors.text}>
         <Image src={iconSrc} alt="icon" width={41} height={45} />
         <h1>Yves</h1>
       </Left>
 
-      <Links display={"none"} />
+      <DarkMode onClick={() => setDarkMode(!darkMode)}>
+        <Image
+          src={darkMode ? moon : sun}
+          alt="dark mode or light mode"
+          width={30}
+        />
+      </DarkMode>
 
+      <Links
+        display={"none"}
+        color={colors.text}
+        textColor={colors.textContrast}
+      />
       <Burguer
         onClick={() => {
           setShowSideScreen(!showSideScreen);
         }}
+        color={colors.text}
       >
         <span></span>
         <span></span>
         <span></span>
       </Burguer>
-
-      <SideScreen show={showSideScreen}>
+      <SideScreen
+        show={showSideScreen}
+        color={colors.sixty}
+        textColor={colors.text}
+      >
         <Links display={"block"} />
       </SideScreen>
     </Nav>
@@ -44,6 +62,8 @@ const Nav = styled.nav`
 
   box-shadow: 4px 5px 9px #6a6a6a25;
   position: relative;
+
+  background-color: ${(props) => props.color};
 `;
 
 const Left = styled.div`
@@ -53,10 +73,7 @@ const Left = styled.div`
   align-items: center;
   h1 {
     margin-left: 10px;
-    color: ${COLORS.text};
-  }
-  img {
-    color: red;
+    color: ${(props) => props.color};
   }
 `;
 
@@ -69,7 +86,7 @@ const Burguer = styled.div`
 
   span {
     width: 30px;
-    border: 1px solid ${COLORS.thirty};
+    border: 1px solid ${(props) => props.color};
     margin: 5px;
   }
   @media (max-width: 768px) {
@@ -81,7 +98,7 @@ const Burguer = styled.div`
 `;
 
 const SideScreen = styled.div`
-  background-color: #262626;
+  background-color: ${(props) => props.color};
   width: 70%;
   height: 100vh;
 
@@ -102,8 +119,12 @@ const SideScreen = styled.div`
 
     a {
       margin: 15px 0px;
-      color: white;
+      color: ${(props) => props.textColor};
       font-weight: 600;
     }
   }
+`;
+
+const DarkMode = styled.div`
+  cursor: pointer;
 `;

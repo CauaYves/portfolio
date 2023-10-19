@@ -1,9 +1,9 @@
-import COLORS from "@/constants/colors";
+import { COLORS } from "@/constants/colors";
 import styled from "styled-components";
 
-const Links = ({ display }) => {
+const Links = ({ display, color, textColor }) => {
   return (
-    <Main display={display}>
+    <Main display={display} color={color} textColor={textColor}>
       <a href="#">Home</a>
       <a href="#">Projetos</a>
       <a href="#">Contato</a>
@@ -21,7 +21,7 @@ const Main = styled.div`
   a {
     position: relative;
     margin-right: 40px;
-    color: ${COLORS.textContrast};
+    color: ${(props) => props.color};
     text-shadow: 1px 1px 2px #007acc3f;
 
     &:before {
@@ -30,7 +30,7 @@ const Main = styled.div`
       bottom: -2px;
       height: 2px;
       width: 100%;
-      background-color: ${COLORS.text};
+      background-color: ${(props) => props.textColor};
       transform: scaleX(0);
       transition: transform 0.2s linear;
     }
