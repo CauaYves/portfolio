@@ -25,7 +25,6 @@ export default function NavBar() {
           width={30}
         />
       </DarkMode>
-
       <Links
         display={"none"}
         color={colors.text}
@@ -102,7 +101,7 @@ const SideScreen = styled.div`
   width: 70%;
   height: 100vh;
 
-  position: absolute;
+  position: fixed;
   left: ${(props) => (props.show ? "0" : "-70%")};
   top: 0;
 

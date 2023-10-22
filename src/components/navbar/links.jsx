@@ -1,4 +1,3 @@
-import { COLORS } from "@/constants/colors";
 import styled from "styled-components";
 
 const Links = ({ display, color, textColor }) => {
