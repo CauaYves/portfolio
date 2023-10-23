@@ -11,7 +11,10 @@ export default function Hello() {
     <Main>
       <Top color={colors.text}>
         <p>Olá visitante,</p>
-        <h1>EU SOU DESENVOLVEDOR FULL STACK</h1>
+        <h1>
+          EU SOU
+          <br /> DESENVOLVEDOR <br /> FULL STACK
+        </h1>
         <p>Seja bem vindo ao meu portfólio</p>
       </Top>
       <Mid

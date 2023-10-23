@@ -1,6 +1,6 @@
 const COLORS = {
   sixty: "#fafafa",
-  thirty: "#affaff",
+  thirty: "#cafbff",
   twenty: "#008192",
   text: "#000000",
   textContrast: "#333333",

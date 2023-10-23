@@ -53,6 +53,7 @@ export default function NavBar() {
 
 const Nav = styled.nav`
   height: 60px;
+  width: calc(100vw - 40px);
   padding: 0px 20px;
 
   display: flex;
@@ -60,7 +61,7 @@ const Nav = styled.nav`
   justify-content: space-between;
 
   box-shadow: 4px 5px 9px #6a6a6a25;
-  position: relative;
+  position: fixed;
 
   background-color: ${(props) => props.color};
 `;
