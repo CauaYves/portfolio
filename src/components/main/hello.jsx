@@ -48,10 +48,22 @@ const Main = styled.div`
 `;
 
 const Top = styled.div`
+  z-index: 2;
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2em;
+    }
+  }
+  @media (min-width: 768px) {
+    h1 {
+      line-height: 0.9;
+      font-size: 4.5em;
+    }
+  }
   h1 {
     color: ${(props) => props.color};
-    font-size: 2em;
   }
+
   p {
     color: ${(props) => props.color};
     font-size: large;

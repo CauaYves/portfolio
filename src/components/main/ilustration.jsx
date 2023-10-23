@@ -11,13 +11,18 @@ export default function Ilustration() {
   };
 
   useEffect(() => {
-    console.log(mousePosition);
+    console.log((mousePosition[0] / 120 + 50 * -1).toFixed(0));
   }, [mousePosition]);
 
   return (
-    <Main>
+    <Main
+      positionX={(mousePosition[0] / 100 - 100).toFixed(0)}
+      positionY={(mousePosition[1] / 100 + 20).toFixed(0)}
+      positionXmobile={(mousePosition[0] / 120 + 50 * -1).toFixed(0)}
+      positionYmobile={(mousePosition[1] / 120 + 50 * -1).toFixed(0)}
+    >
       <MousePositionTracker onMousePositionChange={handleMousePositionChange} />
-      <Image src={developer} alt="developer"></Image>
+      <Image src={developer} alt="developer" height={500}></Image>
     </Main>
   );
 }
@@ -28,13 +33,19 @@ const Main = styled.div`
 
   img {
     position: absolute;
-
     @media (min-width: 768px) {
-      transform: translate(-100%, -50%);
+      transform: translate(
+        ${(props) => props.positionX}%,
+        ${(props) => props.positionY}%
+      );
     }
-
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
+    @media (max-width: 768px) {
+      margin-top: 200px;
+      width: 300px;
+      transform: translate(
+        ${(props) => props.positionXmobile}%,
+        ${(props) => props.positionYmobile}%
+      );
+    }
   }
 `;

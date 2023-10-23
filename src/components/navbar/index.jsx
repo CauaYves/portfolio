@@ -64,6 +64,8 @@ const Nav = styled.nav`
   position: fixed;
 
   background-color: ${(props) => props.color};
+
+  z-index: 9;
 `;
 
 const Left = styled.div`
