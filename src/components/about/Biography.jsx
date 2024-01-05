@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export default function Biography() {
   const atualJob = "Erudir Tech";
-  const text = `Olá, me chamo Cauã Yves, tenho 19 anos, sou formado em desenvolvimento de software e atualmente trabalho na ${atualJob} como desenvolvedor de software.`;
+  const text = `Olá, me chamo Cauã Yves, tenho 19 anos, sou do Rio de Janeiro, Volta redonda, me formei em desenvolvimento de software e atualmente trabalho na ${atualJob} como desenvolvedor de software.`;
 
   return (
     <BiographyContainer>

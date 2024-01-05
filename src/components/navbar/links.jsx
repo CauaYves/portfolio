@@ -18,24 +18,9 @@ const Main = styled.div`
   align-items: center;
 
   a {
-    position: relative;
-    margin-right: 40px;
     color: ${(props) => props.color};
-    text-shadow: 1px 1px 2px #007acc3f;
-
     &:before {
-      content: "";
-      position: absolute;
-      bottom: -2px;
-      height: 2px;
-      width: 100%;
       background-color: ${(props) => props.textColor};
-      transform: scaleX(0);
-      transition: transform 0.2s linear;
-    }
-
-    &:hover:before {
-      transform: scaleX(1);
     }
   }
 

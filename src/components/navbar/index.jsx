@@ -52,7 +52,7 @@ export default function NavBar() {
 }
 
 const Nav = styled.nav`
-  height: 60px;
+  height: 100px;
   width: calc(100vw - 40px);
   padding: 0px 20px;
 
@@ -60,12 +60,11 @@ const Nav = styled.nav`
   align-items: center;
   justify-content: space-between;
 
-  box-shadow: 4px 5px 9px #6a6a6a25;
   position: fixed;
 
   background-color: ${(props) => props.color};
 
-  z-index: 9;
+  z-index: 1000;
 `;
 
 const Left = styled.div`

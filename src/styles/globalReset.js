@@ -17,9 +17,28 @@ const GlobalStyles = createGlobalStyle`
     transition: all 1s ease;
   }
 
-  a {
+a {
     text-decoration: none;
+    position: relative;
+    margin-right: 40px;
     color: white;
+    text-shadow: 1px 1px 2px #007acc3f;
+    font-family: var(--terciaryfont), Arial, Helvetica, sans-serif;
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      height: 2px;
+      width: 100%;
+      background-color: white;
+      transform: scaleX(0);
+      transition: transform 0.2s linear;
+    }
+
+    &:hover:before {
+      transform: scaleX(1);
+    }
   }
 
   h1 {

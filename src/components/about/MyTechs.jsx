@@ -6,17 +6,29 @@ import technologies from "@/constants/technologies";
 export default function MyTechs() {
   return (
     <MyTechsContainer>
-      {technologies.map((tech) => {
-        return <TechItem key={tech.tech} photo={tech.img} name={tech.tech} />;
-      })}
+      <h1>Minhas Habilidades</h1>
+      <TechContainer>
+        {technologies.map((tech) => {
+          return <TechItem key={tech.tech} photo={tech.img} name={tech.tech} />;
+        })}
+      </TechContainer>
     </MyTechsContainer>
   );
 }
 
 const MyTechsContainer = styled.div`
-  height: 100px;
+  margin-top: 50px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+const TechContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  width: 100%;
 `;

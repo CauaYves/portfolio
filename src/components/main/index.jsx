@@ -2,10 +2,9 @@ import styled from "styled-components";
 import { useDarkMode } from "@/context/colors-context";
 import Hello from "./hello";
 import Ilustration from "./ilustration";
-import technologies from "@/constants/technologies";
 
 export default function Main() {
-  const { darkMode, colors } = useDarkMode();
+  const { colors } = useDarkMode();
 
   return (
     <Body color={colors.sixty} gradient={colors.thirty}>

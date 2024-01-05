@@ -17,13 +17,7 @@ export default function Hello() {
         </h1>
         <p>Seja bem vindo ao meu portfólio</p>
       </Top>
-      <Mid
-        color={colors.shadow}
-        fontColor={colors.textContrast}
-        hover={colors.thirty}
-      >
-        <a href="#">Saiba mais sobre mim</a>
-      </Mid>
+
       <Bottom>
         <Image src={github} alt="github" />
         <Image src={linkedin} alt="linkedin" />

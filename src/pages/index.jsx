@@ -3,6 +3,7 @@ import NavBar from "@/components/navbar";
 import Main from "@/components/main";
 import About from "@/components/about";
 import { useDarkMode } from "@/context/colors-context";
+import Footer from "@/components/footer";
 
 export default function Home() {
   const { colors } = useDarkMode();
@@ -12,6 +13,7 @@ export default function Home() {
       <NavBar />
       <Main />
       <About />
+      <Footer />
     </Body>
   );
 }

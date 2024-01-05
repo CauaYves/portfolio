@@ -4,21 +4,17 @@ import photo from "../../../public/photo.jpg";
 import { useDarkMode } from "@/context/colors-context";
 import Biography from "./Biography";
 import MyTechs from "./MyTechs";
+
 export default function About() {
   const { colors } = useDarkMode();
-
   return (
-    <AboutWrapper color={colors.light}>
+    <AboutWrapper color={colors.sixty} secondarycolor={colors.twenty}>
       <Introduction>
         <Pentagon primarycolor={colors.twenty} secondarycolor={colors.thirty}>
           <PentagonInsider>
             <Image src={photo} alt="My photo" width={135} />
           </PentagonInsider>
         </Pentagon>
-        <HorizontalBar
-          primarycolor={colors.shadow}
-          secondarycolor={colors.thirty}
-        ></HorizontalBar>
         <Biography />
         <MyTechs />
       </Introduction>
@@ -27,12 +23,23 @@ export default function About() {
 }
 
 const AboutWrapper = styled.div`
+  height: 100vh;
+  width: 100%;
+
   background-color: ${(props) => props.color};
+  background-image: linear-gradient(
+    90deg,
+    ${(props) => props.color},
+    ${(props) => props.secondarycolor},
+    ${(props) => props.color}
+  );
 
   box-shadow: 5px 5px 10px 0px rgb(248, 0, 0) outset;
-
-  width: 100%;
   border-top: 1px solid #00000036;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Introduction = styled.div`
@@ -42,6 +49,7 @@ const Introduction = styled.div`
   justify-content: center;
 
   position: relative;
+  padding-bottom: 100px;
 `;
 
 const Pentagon = styled.div`
@@ -65,17 +73,4 @@ const PentagonInsider = styled(Pentagon)`
   width: 135px;
   height: 135px;
   background-color: #c6c8cb;
-`;
-
-const HorizontalBar = styled.div`
-  background-image: url("tech-background.jpeg");
-  background-position: center center;
-  height: 60px;
-  width: 100%;
-
-  position: absolute;
-  top: 75px;
-  z-index: 998;
-
-  border: 2px solid #0000002d;
 `;

@@ -6,7 +6,7 @@ export default function TechItem({ photo, name }) {
   const { colors } = useDarkMode();
 
   return (
-    <TechItemContainer>
+    <TechItemContainer fontcolor={colors.text}>
       <Pentagon primarycolor={colors.sixty} secondarycolor={colors.thirty}>
         <PentagonInsider>
           <Image src={photo} alt="technology" width={100} height={100} />
@@ -18,13 +18,15 @@ export default function TechItem({ photo, name }) {
 }
 
 const TechItemContainer = styled.div`
-  margin-top: 50px;
+  margin: 50px 4px 0px 4px;
 
   display: flex;
   align-items: center;
   flex-direction: column;
   p {
     font-size: 15px;
+    color: ${(props) => props.fontcolor};
+    font-weight: 700;
   }
 `;
 
