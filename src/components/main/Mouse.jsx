@@ -15,7 +15,6 @@ class MousePositionTracker extends Component {
       mouseY: event.clientY,
     });
 
-    // Chame a função passada via props para atualizar os valores em Main
     this.props.onMousePositionChange([event.clientX, event.clientY]);
   };
 

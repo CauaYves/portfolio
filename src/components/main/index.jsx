@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { useDarkMode } from "@/context/colors-context";
 import Hello from "./hello";
 import Ilustration from "./ilustration";
+import technologies from "@/constants/technologies";
 
 export default function Main() {
   const { darkMode, colors } = useDarkMode();
@@ -27,7 +28,6 @@ const Body = styled.div`
   }
 
   width: 100vw;
-  max-width: 1600px;
   min-height: 100vh;
 
   margin: auto;

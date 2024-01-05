@@ -13,7 +13,7 @@ export default function Hello() {
         <p>Olá visitante,</p>
         <h1>
           EU SOU
-          <br /> DESENVOLVEDOR <br /> FULL STACK
+          <br /> DESENVOLVEDOR FULL STACK
         </h1>
         <p>Seja bem vindo ao meu portfólio</p>
       </Top>
@@ -59,9 +59,6 @@ const Top = styled.div`
       line-height: 0.9;
       font-size: 4.5em;
     }
-  }
-  h1 {
-    color: ${(props) => props.color};
   }
 
   p {

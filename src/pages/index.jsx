@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import NavBar from "@/components/navbar";
 import Main from "@/components/main";
+import About from "@/components/about";
 import { useDarkMode } from "@/context/colors-context";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
     <Body color={colors.sixty} gradient={colors.thirty}>
       <NavBar />
       <Main />
+      <About />
     </Body>
   );
 }
