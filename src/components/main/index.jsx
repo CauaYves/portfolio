@@ -7,7 +7,7 @@ export default function Main() {
   const { colors } = useDarkMode();
 
   return (
-    <Body color={colors.sixty} gradient={colors.thirty}>
+    <Body $color={colors.sixty} $gradient={colors.thirty}>
       <HelloWrapper>
         <Hello />
       </HelloWrapper>
@@ -31,13 +31,13 @@ const Body = styled.div`
 
   margin: auto;
 
-  background-color: ${(props) => props.color};
+  background-color: ${(props) => props.$color};
   background-image: linear-gradient(
     120deg,
-    ${(props) => props.gradient},
-    ${(props) => props.color},
-    ${(props) => props.color},
-    ${(props) => props.gradient}
+    ${(props) => props.$gradient},
+    ${(props) => props.$color},
+    ${(props) => props.$color},
+    ${(props) => props.$gradient}
   );
 
   display: flex;

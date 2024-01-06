@@ -6,8 +6,8 @@ export default function TechItem({ photo, name }) {
   const { colors } = useDarkMode();
 
   return (
-    <TechItemContainer fontcolor={colors.text}>
-      <Pentagon primarycolor={colors.sixty} secondarycolor={colors.thirty}>
+    <TechItemContainer $fontcolor={colors.text}>
+      <Pentagon $primarycolor={colors.sixty} $secondarycolor={colors.thirty}>
         <PentagonInsider>
           <Image src={photo} alt="technology" width={100} height={100} />
         </PentagonInsider>
@@ -25,7 +25,7 @@ const TechItemContainer = styled.div`
   flex-direction: column;
   p {
     font-size: 15px;
-    color: ${(props) => props.fontcolor};
+    color: ${(props) => props.$fontcolor};
     font-weight: 700;
   }
 `;
@@ -35,8 +35,8 @@ const Pentagon = styled.div`
   height: 100px;
   background: radial-gradient(
     circle,
-    ${(props) => props.primarycolor},
-    ${(props) => props.secondarycolor}
+    ${(props) => props.$primarycolor},
+    ${(props) => props.$secondarycolor}
   );
 
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);

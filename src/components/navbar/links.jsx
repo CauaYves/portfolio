@@ -1,34 +1,46 @@
 import styled from "styled-components";
+import Link from "next/link";
+import { useDarkMode } from "@/context/colors-context";
 
-const Links = ({ display, color, textColor }) => {
+export default function Links({ display }) {
+  const { colors } = useDarkMode();
+
   return (
-    <Main display={display} color={color} textColor={textColor}>
-      <a href="#">Home</a>
-      <a href="#">Projetos</a>
-      <a href="#">Contato</a>
-      <a href="#">Sobre mim</a>
+    <Main $display={display}>
+      <Anchor href="#" $textcolor={colors.text}>
+        Home
+      </Anchor>
+      <Anchor href="#" $textcolor={colors.text}>
+        Projetos
+      </Anchor>
+      <Anchor href="#" $textcolor={colors.text}>
+        Contato
+      </Anchor>
+      <Anchor href="#" $textcolor={colors.text}>
+        Sobre mim
+      </Anchor>
     </Main>
   );
-};
+}
 
 const Main = styled.div`
   height: 100%;
 
-  display: flex;
   align-items: center;
 
-  a {
-    color: ${(props) => props.color};
-    &:before {
-      background-color: ${(props) => props.textColor};
-    }
+  @media (min-width: 768px) {
+    display: flex;
   }
-
   @media (max-width: 768px) {
-    display: ${(props) => props.display};
+    display: none;
     align-items: baseline !important;
     padding: 50px 0px 0px 70px;
   }
 `;
 
-export default Links;
+const Anchor = styled(Link)`
+  color: ${(props) => props.$textcolor};
+  &:before {
+    background-color: ${(props) => props.$textcolor};
+  }
+`;

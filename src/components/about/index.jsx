@@ -8,9 +8,9 @@ import MyTechs from "./MyTechs";
 export default function About() {
   const { colors } = useDarkMode();
   return (
-    <AboutWrapper color={colors.sixty} secondarycolor={colors.twenty}>
+    <AboutWrapper $color={colors.sixty} $secondarycolor={colors.twenty}>
       <Introduction>
-        <Pentagon primarycolor={colors.twenty} secondarycolor={colors.thirty}>
+        <Pentagon $primarycolor={colors.twenty} $secondarycolor={colors.thirty}>
           <PentagonInsider>
             <Image src={photo} alt="My photo" width={135} />
           </PentagonInsider>
@@ -26,12 +26,12 @@ const AboutWrapper = styled.div`
   height: 100vh;
   width: 100%;
 
-  background-color: ${(props) => props.color};
+  background-color: ${(props) => props.$color};
   background-image: linear-gradient(
     90deg,
-    ${(props) => props.color},
-    ${(props) => props.secondarycolor},
-    ${(props) => props.color}
+    ${(props) => props.$color},
+    ${(props) => props.$secondarycolor},
+    ${(props) => props.$color}
   );
 
   box-shadow: 5px 5px 10px 0px rgb(248, 0, 0) outset;
@@ -57,8 +57,8 @@ const Pentagon = styled.div`
   height: 150px;
   background: radial-gradient(
     ellipse at center,
-    ${(props) => props.primarycolor},
-    ${(props) => props.secondarycolor}
+    ${(props) => props.$primarycolor},
+    ${(props) => props.$secondarycolor}
   );
   clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
 

@@ -9,7 +9,7 @@ export default function Home() {
   const { colors } = useDarkMode();
 
   return (
-    <Body color={colors.sixty} gradient={colors.thirty}>
+    <Body $color={colors.sixty} $gradient={colors.thirty}>
       <NavBar />
       <Main />
       <About />
@@ -21,12 +21,12 @@ export default function Home() {
 const Body = styled.main`
   width: 100vw;
   height: 100vh;
-  background-color: ${(props) => props.color};
+  background-color: ${(props) => props.$color};
   background-image: linear-gradient(
     120deg,
-    ${(props) => props.color},
-    ${(props) => props.gradient},
-    ${(props) => props.gradient},
-    ${(props) => props.color}
+    ${(props) => props.$color},
+    ${(props) => props.$gradient},
+    ${(props) => props.$gradient},
+    ${(props) => props.$color}
   );
 `;

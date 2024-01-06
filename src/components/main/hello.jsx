@@ -6,10 +6,10 @@ import linkedin from "../../../public/Linkedin.svg";
 import discord from "../../../public/discord.svg";
 
 export default function Hello() {
-  const { darkMode, colors } = useDarkMode();
+  const { colors } = useDarkMode();
   return (
     <Main>
-      <Top color={colors.text}>
+      <Top $color={colors.text}>
         <p>Olá visitante,</p>
         <h1>
           EU SOU
@@ -56,32 +56,11 @@ const Top = styled.div`
   }
 
   p {
-    color: ${(props) => props.color};
+    color: ${(props) => props.$color};
     font-size: large;
-    color: ${(props) => props.color};
+    color: ${(props) => props.$color};
     text-shadow: 1px 1px 2px #007acc3f;
     font-weight: 600;
-  }
-`;
-
-const Mid = styled.div`
-  background-color: ${(props) => props.color};
-  height: 60px;
-  width: 200px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 20px;
-
-  &:hover {
-    background-color: ${(props) => props.hover};
-  }
-
-  a {
-    font-size: large;
-    color: ${(props) => props.fontColor};
   }
 `;
 

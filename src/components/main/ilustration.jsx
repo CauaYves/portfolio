@@ -2,7 +2,7 @@ import MousePositionTracker from "./Mouse"; // Supondo que o componente esteja e
 import styled from "styled-components";
 import Image from "next/image";
 import developer from "../../../public/developer.svg";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Ilustration() {
   const [mousePosition, setMousePosition] = useState([0, 0]);
@@ -10,16 +10,12 @@ export default function Ilustration() {
     setMousePosition(position);
   };
 
-  useEffect(() => {
-    console.log((mousePosition[0] / 120 + 50 * -1).toFixed(0));
-  }, [mousePosition]);
-
   return (
     <Main
-      positionX={(mousePosition[0] / 100 - 100).toFixed(0)}
-      positionY={(mousePosition[1] / 100 + 20).toFixed(0)}
-      positionXmobile={(mousePosition[0] / 120 + 50 * -1).toFixed(0)}
-      positionYmobile={(mousePosition[1] / 120 + 50 * -1).toFixed(0)}
+      $positionX={(mousePosition[0] / 100 - 100).toFixed(0)}
+      $positionY={(mousePosition[1] / 100 + 20).toFixed(0)}
+      $positionXmobile={(mousePosition[0] / 120 + 50 * -1).toFixed(0)}
+      $positionYmobile={(mousePosition[1] / 120 + 50 * -1).toFixed(0)}
     >
       <MousePositionTracker onMousePositionChange={handleMousePositionChange} />
       <Image src={developer} alt="developer" height={500}></Image>
@@ -35,16 +31,16 @@ const Main = styled.div`
     position: absolute;
     @media (min-width: 768px) {
       transform: translate(
-        ${(props) => props.positionX}%,
-        ${(props) => props.positionY}%
+        ${(props) => props.$positionX}%,
+        ${(props) => props.$positionY}%
       );
     }
     @media (max-width: 768px) {
       margin-top: 200px;
       width: 300px;
       transform: translate(
-        ${(props) => props.positionXmobile}%,
-        ${(props) => props.positionYmobile}%
+        ${(props) => props.$positionXmobile}%,
+        ${(props) => props.$positionYmobile}%
       );
     }
   }

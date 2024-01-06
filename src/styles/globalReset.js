@@ -1,8 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-  @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Raleway:wght@300&family=Source+Code+Pro&display=swap");
-
   :root {
     --primaryfont: "Fira Code", Arial, Helvetica, sans-serif;
     --secondaryfont: "Raleway";
@@ -21,7 +19,6 @@ a {
     text-decoration: none;
     position: relative;
     margin-right: 40px;
-    color: white;
     text-shadow: 1px 1px 2px #007acc3f;
     font-family: var(--terciaryfont), Arial, Helvetica, sans-serif;
 

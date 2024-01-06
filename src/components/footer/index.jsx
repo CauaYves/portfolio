@@ -5,23 +5,23 @@ export default function Footer() {
   const { colors } = useDarkMode();
   return (
     <FooterContainer>
-      <LinksImageContainer background={colors.sixty}>
+      <LinksImageContainer $background={colors.sixty}>
         <Anchor
           href="https://api.whatsapp.com/send?phone=24992287640"
-          textcolor={colors.text}
+          $textcolor={colors.text}
         >
           whatsapp
         </Anchor>
         <Anchor
           href="https://www.linkedin.com/in/cauayves/"
-          textcolor={colors.text}
+          $textcolor={colors.text}
         >
           linkedin
         </Anchor>
-        <Anchor href="https://github.com/CauaYves" textcolor={colors.text}>
+        <Anchor href="https://github.com/CauaYves" $textcolor={colors.text}>
           github
         </Anchor>
-        <Anchor href="#" textcolor={colors.text}>
+        <Anchor href="#" $textcolor={colors.text}>
           email
         </Anchor>
       </LinksImageContainer>
@@ -46,7 +46,7 @@ const FooterContainer = styled.div`
 `;
 
 const LinksImageContainer = styled.div`
-  background-color: ${(props) => props.background};
+  background-color: ${(props) => props.$background};
   height: 100%;
   width: 100%;
   display: flex;
@@ -55,8 +55,8 @@ const LinksImageContainer = styled.div`
 `;
 
 const Anchor = styled.a`
-  color: ${(props) => props.textcolor};
+  color: ${(props) => props.$textcolor};
   &:before {
-    background-color: ${(props) => props.textcolor};
+    background-color: ${(props) => props.$textcolor};
   }
 `;
