@@ -10,6 +10,19 @@
     #ffffff10,
     #ffffff80
   );
+  --color-one: #3d60e0;
+  --color-two: #3dc8e0;
+
+  --padding-min: 32px;
+
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-one);
+    border-radius: 5px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,10 +38,6 @@
       #ffffff10,
       #ffffff80
     );
-    --color-one: #3d60e0;
-    --color-two: #3dc8e0;
-
-    --padding-min: 32px;
   }
 }
 
@@ -48,6 +57,11 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+button {
+  outline: none;
+  background-color: inherit;
+  border: inherit;
 }
 
 @media (prefers-color-scheme: dark) {

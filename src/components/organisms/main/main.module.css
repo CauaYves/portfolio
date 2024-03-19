@@ -1,0 +1,44 @@
+.mainWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 80vh;
+  max-width: var(--max-width);
+}
+
+.presentationText {
+  color: #fff;
+  max-width: 650px;
+  line-height: 140%;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: left;
+}
+.promotedText {
+  color: var(--color-one);
+  text-align: left;
+}
+.presentationText > span {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+  }
+  .presentationWrapper {
+    max-width: 320px;
+  }
+  .presentationText {
+    font-size: 1.8rem;
+    text-align: center;
+    max-width: 320px;
+    margin-bottom: 30px;
+  }
+}
