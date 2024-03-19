@@ -12,8 +12,9 @@
   );
   --color-one: #3d60e0;
   --color-two: #3dc8e0;
-
+  --color-three: #9ca3af;
   --padding-min: 32px;
+  --mobile-padding: 16px;
 
   ::-webkit-scrollbar {
     width: 7px;
@@ -22,6 +23,10 @@
   ::-webkit-scrollbar-thumb {
     background-color: var(--color-one);
     border-radius: 5px;
+  }
+  ::selection {
+    background-color: var(--color-two); /* Cor de fundo da seleção */
+    color: #ffffff; /* Cor do texto selecionado */
   }
 }
 

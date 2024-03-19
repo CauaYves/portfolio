@@ -5,18 +5,21 @@
 
 .main {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 6rem;
-  min-height: 80vh;
+  padding: 190px var(--padding-min) 50px;
+  min-height: 100vh;
   max-width: var(--max-width);
 }
-
+.presentationWrapper {
+  width: 60%;
+}
+.presentationImage {
+  width: 40%;
+}
 .presentationText {
   color: #fff;
-  max-width: 650px;
   line-height: 140%;
-  font-size: 2rem;
+  font-size: 2.8rem;
   font-weight: 500;
   text-align: left;
 }
@@ -26,19 +29,40 @@
 }
 .presentationText > span {
   text-align: left;
+  min-height: 20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .main {
     flex-direction: column;
   }
   .presentationWrapper {
-    max-width: 320px;
+    width: 80%;
   }
   .presentationText {
-    font-size: 1.8rem;
+    font-size: 2.3rem;
     text-align: center;
-    max-width: 320px;
     margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 568px) {
+  .main {
+    position: relative;
+    padding: 190px var(--padding-min) 50px;
+  }
+  .presentationWrapper {
+    width: 50%;
+  }
+  .presentationText {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .presentationWrapper > span {
+    margin-bottom: 30px;
+    font-size: 0.9rem !important;
+    max-width: inherit;
+    text-align: center;
   }
 }

@@ -17,7 +17,7 @@ export default function Main() {
           <h1 className={styles.presentationText}>
             Transformando idéias em{" "}
             <span className={styles.promotedText}>soluções</span>, linha por
-            linha, no front-end e no back-end.
+            linha, <br /> no front-end e no back-end.
           </h1>
           <SubPresentationText />
         </div>

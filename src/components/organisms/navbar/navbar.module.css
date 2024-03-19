@@ -3,16 +3,19 @@
 }
 .navWrapper {
   background-color: #000000;
+  z-index: 1;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
 }
 
 .nav {
+  padding: 0px var(--padding-min);
+
   width: var(--max-width);
   min-height: 90px;
-  padding: 0px var(--padding-min);
 
   display: flex;
   align-items: center;

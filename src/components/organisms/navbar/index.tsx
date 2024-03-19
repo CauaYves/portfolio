@@ -13,7 +13,13 @@ export default function NavBar() {
   return (
     <div className={styles.navWrapper}>
       <nav className={styles.nav}>
-        <Image alt="Cauã Yves" src="/logo.svg" width={170} height={90} />
+        <Image
+          alt="Cauã Yves"
+          src="/logo.svg"
+          width={170}
+          height={90}
+          priority
+        />
         <button className={styles.menu} onClick={handleMenuClick}>
           <div
             className={`${styles.line} ${isMenuOpen ? styles.line1 : ""}`}
