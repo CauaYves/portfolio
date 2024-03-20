@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./experiences.module.css";
-import ExperienceCard from "./experienceCard";
+import ExperienceCard from "./card";
 import { xp } from "./experiences.array";
 
 export default function Experiences() {
@@ -17,7 +17,7 @@ export default function Experiences() {
     arrows: true,
     pauseOnFocus: true,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 10000,
   };
 
   return (

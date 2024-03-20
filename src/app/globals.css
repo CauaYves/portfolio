@@ -15,7 +15,7 @@
   --color-three: #9ca3af;
   --padding-min: 32px;
   --mobile-padding: 16px;
-
+  --mobile-font: 0.8rem;
   ::-webkit-scrollbar {
     width: 7px;
   }
