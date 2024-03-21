@@ -8,7 +8,7 @@ export default function AboutMe() {
   return (
     <div className={styles.aboutMeWrapper}>
       <div className={styles.aboutMe}>
-        <div>
+        <div className={styles.imageWrapper}>
           <Image
             alt="Cauã Yves"
             src="/me.jpg"

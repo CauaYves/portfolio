@@ -1,0 +1,30 @@
+.footerWrapper {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  width: var(--max-width);
+  padding: var(--padding-min);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.footer > h5 > span {
+  color: var(--color-one);
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+.collumnLinks {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100px;
+}

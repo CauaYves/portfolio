@@ -1,0 +1,27 @@
+.text-shpere {
+  position: relative;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tagcloud {
+  display: inline-block;
+  top: 0;
+  left: 0;
+  font-weight: 600;
+  letter-spacing: 0.0625em;
+  font-size: 1.3em;
+}
+
+.tagcloud--item {
+  color: var(--color-one);
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.tagcloud--item:hover {
+  color: var(--color-two);
+}

@@ -23,7 +23,7 @@ export const xp = [
     endDate: "out 2023",
     currentXpTime: "11 meses",
     description:
-      "Treinamento intensivo simulando mercado de trabalho tech.\n \n Desenvolvi mais de 25 projetos, tanto Front quanto Back das aplicações.\n \nO projeto que mais exigiu esforço foi o Link.r, uma rede social de links que contava com cadastro/login, chat interativo entre usuários, posts, buscas por palavras chaves e segurança dos dados de usuário. Por ser um projeto grande, tive a ajuda de 3 incríveis pessoas que demostraram empenho e grande habilidade para entregar as demandas no tempo certo.",
+      "Treinamento intensivo simulando mercado de trabalho tech.  Desenvolvi mais de 25 projetos, tanto Front quanto Back das aplicações. O projeto que mais exigiu esforço foi o Link.r, uma rede social de links que contava com cadastro/login, chat interativo entre usuários, posts, buscas por palavras chaves e segurança dos dados de usuário. Por ser um projeto grande, tive a ajuda de 3 incríveis pessoas que demostraram empenho e grande habilidade para entregar as demandas no tempo certo.",
   },
   {
     id: 2,
@@ -32,8 +32,8 @@ export const xp = [
     startDate: "out 2023",
     endDate: "jan 2024",
     currentXpTime: "4 meses",
-    description: `Desenvolvimento e manutenção de aplicações web usando tecnologias front-end e back-end. \n  \nColaboração estreita com a equipe de design e outros desenvolvedores para garantir uma experiência do usuário excepcional. \n \nImplementação de recursos de segurança como tokens JWT e vínculo a e-mail para proteger os dados do usuário e garantir a conformidade com as melhores práticas de segurança.
-       \nTecnologias usadas: MUI Component, React.Js, JWT, Typescript, Next.Js, PostgreSQL, Node.Js, Express.Js",
+    description: `Desenvolvimento e manutenção de aplicações web usando tecnologias front-end e back-end.   Colaboração estreita com a equipe de design e outros desenvolvedores para garantir uma experiência do usuário excepcional.  Implementação de recursos de segurança como tokens JWT e vínculo a e-mail para proteger os dados do usuário e garantir a conformidade com as melhores práticas de segurança.
+       Tecnologias usadas: MUI Component, React.Js, JWT, Typescript, Next.Js, PostgreSQL, Node.Js, Express.Js",
       `,
   },
   {
@@ -44,6 +44,6 @@ export const xp = [
     endDate: "cargo atual",
     currentXpTime: "5 meses",
     description:
-      "Desenvolvimento de software voltado para projetos de cultura da cidade de Barra mansa que visam pôr em vigor a lei Paulo gustavo e Aldir Blanc, projeto voltado totalmente para o desenvolvimento de cultura e educação.\n     \n Tomada de decisões diretas em relação a projetos e desenvolvimento. \n                                        \n Uso de metodologia SCRUM para gerenciamento de tarefas. \n                                                         \nTecnologias usadas: React.Js, Typescript, Next.Js, PostgreSQL, Node.Js, Express.Js",
+      "Desenvolvimento de software voltado para projetos de cultura da cidade de Barra mansa que visam pôr em vigor a lei Paulo gustavo e Aldir Blanc, projeto voltado totalmente para o desenvolvimento de cultura e educação.      Tomada de decisões diretas em relação a projetos e desenvolvimento.                                          Uso de metodologia SCRUM para gerenciamento de tarefas.                                                          Tecnologias usadas: React.Js, Typescript, Next.Js, PostgreSQL, Node.Js, Express.Js",
   },
 ];

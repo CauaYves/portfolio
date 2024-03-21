@@ -1,13 +1,26 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./experiences.module.css";
 import ExperienceCard from "./card";
 import { xp } from "./experiences.array";
+import Arrow from "./arrow";
 
 export default function Experiences() {
+  const sliderRef = useRef<Slider>(null);
+  const handleNextSlide = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickNext();
+    }
+  };
+
+  const handlePrevSlide = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickPrev();
+    }
+  };
   const settings = {
     dots: true,
     infinite: true,
@@ -18,6 +31,12 @@ export default function Experiences() {
     pauseOnFocus: true,
     autoplay: true,
     autoplaySpeed: 10000,
+    nextArrow: (
+      <Arrow src="/arrow-right.svg" onClick={handleNextSlide} side="rigth" />
+    ),
+    prevArrow: (
+      <Arrow src="/arrow-left.svg" onClick={handlePrevSlide} side="left" />
+    ),
   };
 
   return (

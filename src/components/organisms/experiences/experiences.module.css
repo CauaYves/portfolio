@@ -14,6 +14,8 @@
   padding: var(--padding-min);
   margin: var(--padding-min);
   overflow: hidden;
+
+  position: relative;
 }
 .experience > h2 {
   margin: 20px 0px;
@@ -22,9 +24,8 @@
 .xpContainer {
   position: relative;
   height: 100%;
-  padding: var(--padding-min);
+  padding: 70px var(--padding-min);
   background-color: #1d1d1d;
-  border-radius: 5px;
 }
 
 .title {
@@ -43,46 +44,48 @@
 .jobInfo > h4 {
   color: var(--color-one);
   text-transform: uppercase;
-  padding: 30px 0px;
+  padding: 0px 0px 30px 0px;
 }
 
 .jobInfo > p {
   color: var(--color-three);
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   line-height: 1.9rem;
   word-spacing: 0.1rem;
-  letter-spacing: 1px;
-  padding: 0px 20px;
+  letter-spacing: 0.1px;
   white-space: pre-line;
 }
 
 .jobInfo {
   position: relative;
 }
-.jobInfo::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-
-  background: linear-gradient(
-    65deg,
-    var(--color-one),
-    var(--color-two),
-    rgba(0, 0, 0, 0.267)
-  );
-}
 
 .currentPage {
   position: absolute;
   right: 20px;
+  bottom: 20px;
+  font-size: 14px;
+  color: var(--color-three);
+}
+
+.arrow {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 998;
+}
+.arrow:hover {
+  margin-right: 50px;
+}
+.arrow > img {
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
   .xpContainer {
     width: 100vw;
+    padding: var(--padding-min);
   }
   .experience {
     padding: 0;
@@ -97,5 +100,8 @@
     font-size: var(--mobile-font);
     padding: 0;
     line-height: 1.2rem;
+  }
+  .title > h2 {
+    margin-top: 30px;
   }
 }
