@@ -11,9 +11,9 @@ export default function Technologies() {
           <h2>Tecnologias</h2>
           <p>
             Tenho grande conhecimento com a linguagem Javascript e frameworks
-            dela , isso me permite trabalhar nos dois polos de uma aplicação, o
+            dela, isso me permite trabalhar nos dois polos de uma aplicação, o
             servidor e parte do cliente, o resultado desse conhecimento são
-            aplicações escaláveis, bonitas e funcionais!
+            aplicações escaláveis, com boa UI/UX e totalmente funcionais.
           </p>
           <div className={styles.graph}>
             <Image width={400} height={280} src="/skills.svg" alt="skills" />

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import styles from "./navbar.module.css";
+import Link from "next/link";
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,20 +33,34 @@ export default function NavBar() {
           ></div>
         </button>
         <div className={styles.deskMenu}>
-          <a href="https://www.linkedin.com/in/cauayves/">Linkedin</a>
-          <a href="https://github.com/CauaYves">Github</a>
-          <a href="https://drive.google.com/file/d/1269CyG7JolrBLipcJORE4Mg9XMt1asnK/view">
+          <Link target="_blank" href="https://www.linkedin.com/in/cauayves/">
+            Linkedin
+          </Link>
+          <Link target="_blank" href="https://github.com/CauaYves">
+            Github
+          </Link>
+          <Link
+            target="_blank"
+            href="https://drive.google.com/file/d/1269CyG7JolrBLipcJORE4Mg9XMt1asnK/view"
+          >
             Currículo
-          </a>
+          </Link>
         </div>
         <div
           className={`${styles.sidebar} ${isMenuOpen ? styles.sidebarOn : ""}`}
         >
-          <a href="https://www.linkedin.com/in/cauayves/">Linkedin</a>
-          <a href="https://github.com/CauaYves">Github</a>
-          <a href="https://drive.google.com/file/d/1269CyG7JolrBLipcJORE4Mg9XMt1asnK/view">
+          <Link target="_blank" href="https://www.linkedin.com/in/cauayves/">
+            Linkedin
+          </Link>
+          <Link target="_blank" href="https://github.com/CauaYves">
+            Github
+          </Link>
+          <Link
+            target="_blank"
+            href="https://drive.google.com/file/d/1269CyG7JolrBLipcJORE4Mg9XMt1asnK/view"
+          >
             Currículo
-          </a>
+          </Link>
         </div>
       </nav>
     </div>
