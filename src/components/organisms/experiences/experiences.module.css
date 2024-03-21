@@ -14,6 +14,8 @@
   padding: var(--padding-min);
   margin: var(--padding-min);
   overflow: hidden;
+
+  position: relative;
 }
 .experience > h2 {
   margin: 20px 0px;
@@ -24,7 +26,6 @@
   height: 100%;
   padding: var(--padding-min);
   background-color: #1d1d1d;
-  border-radius: 5px;
 }
 
 .title {
@@ -52,7 +53,6 @@
   line-height: 1.9rem;
   word-spacing: 0.1rem;
   letter-spacing: 1px;
-  padding: 0px 20px;
   white-space: pre-line;
 }
 
@@ -80,9 +80,24 @@
   right: 20px;
 }
 
+.arrow {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 998;
+}
+.arrow:hover {
+  margin-right: 50px;
+}
+.arrow > img {
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .xpContainer {
     width: 100vw;
+    padding: var(--padding-min);
   }
   .experience {
     padding: 0;

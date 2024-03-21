@@ -25,8 +25,8 @@
     border-radius: 5px;
   }
   ::selection {
-    background-color: var(--color-two); /* Cor de fundo da seleção */
-    color: #ffffff; /* Cor do texto selecionado */
+    background-color: var(--color-two); 
+    color: #ffffff;
   }
 }
 
