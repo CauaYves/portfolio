@@ -3,6 +3,7 @@
 
   align-items: center;
   justify-content: center;
+  background-color: black;
 }
 .tech {
   max-width: var(--max-width);
@@ -30,7 +31,34 @@
 }
 .sphere {
   width: 60%;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  border-radius: 50%;
+  background-image: radial-gradient(
+    circle at center,
+    #102f9e,
+    #00000013,
+    #00000017
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.sphere::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  background-image: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.5)
+  );
+  filter: blur(20px);
+  z-index: -1;
 }

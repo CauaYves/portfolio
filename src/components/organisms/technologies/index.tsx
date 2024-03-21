@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import styles from "./technologies.module.css";
 import TextShpere from "./sphere";
 import Image from "next/image";
