@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import styles from "./experiences.module.css";
 import ExperienceCard from "./card";
 import { xp } from "./experiences.array";
-import Arrow from "./arrowLeft";
+import Arrow from "./arrow";
 
 export default function Experiences() {
   const sliderRef = useRef<Slider>(null);

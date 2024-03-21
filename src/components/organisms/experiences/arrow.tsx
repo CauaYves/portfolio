@@ -15,7 +15,7 @@ const Arrow: React.FC<ArrowProps> = ({ src, onClick, side }) => {
       onClick={onClick}
       style={{ left: `${side === "left" ? "45%" : "55%"}` }}
     >
-      <Image alt="left" src={src} height={25} width={20} />
+      <Image alt="left" src={src} height={45} width={70} />
     </button>
   );
 };

@@ -16,6 +16,7 @@
 
 .card {
   height: 250px;
+  width: 100%;
   max-width: 400px;
   display: flex;
   flex-direction: column;
@@ -23,13 +24,14 @@
 
   padding: var(--padding-min);
 
-  background-image: linear-gradient(to right, #00000080, #5353532c),
+  background-image: linear-gradient(to right, #000000, #7a7a7a1f),
     url("/512github.svg");
   background-position: right;
   background-repeat: no-repeat;
 
   box-shadow: 2px 5px 10px #3d60e025;
   border: 1px solid var(--color-one);
+  background-color: #3d60e031;
 }
 
 .card > h2 {
@@ -43,6 +45,6 @@
 }
 .card > div {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: space-between;
 }

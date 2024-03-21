@@ -86,7 +86,7 @@
   .description > p {
     line-height: 1.5rem;
     word-spacing: 0.04rem;
-    font-size: 0.8rem;
+    font-size: var(--mobile-font);
     color: var(--color-three);
     margin-bottom: 55px;
   }
