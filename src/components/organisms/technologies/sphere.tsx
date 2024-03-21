@@ -3,8 +3,10 @@ import "../styles/TextShpere.css";
 import TagCloud, { TagCloudOptions } from "TagCloud";
 
 const TextShpere = () => {
-  // Animation settings for Text Cloud
   useEffect(() => {
+    console.count("renderizações");
+    if (document.querySelectorAll(".tagcloud").length > 1) return;
+
     const container = document.querySelector(".tagcloud");
 
     if (container) {
@@ -25,7 +27,7 @@ const TextShpere = () => {
       ];
 
       const options = {
-        radius: 300,
+        radius: 200,
         maxSpeed: "normal" as const,
         initSpeed: "normal" as const,
         keep: true,
