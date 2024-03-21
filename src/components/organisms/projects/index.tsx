@@ -1,6 +1,8 @@
 import ProjectCard from "./card";
 import styles from "./projects.module.css";
 import { projects } from "./projects.array";
+import Link from "next/link";
+import UnderConstruction from "./underConstruction";
 
 export default function Projects() {
   function getRandomColor() {
@@ -18,9 +20,7 @@ export default function Projects() {
   }
   return (
     <div className={styles.projectsWrapper}>
-      <div className={styles.titleContainer}>
-        <h2>Projetos</h2>
-      </div>
+      <h2>Projetos</h2>
       <div className={styles.projects}>
         {projects.map((p) => {
           return (
@@ -33,7 +33,15 @@ export default function Projects() {
             />
           );
         })}
+        <UnderConstruction />
       </div>
+      <Link
+        href="https://github.com/CauaYves?tab=repositories"
+        target="_blank"
+        className={styles.repoLink}
+      >
+        <h4>Repositórios do github</h4>
+      </Link>
     </div>
   );
 }

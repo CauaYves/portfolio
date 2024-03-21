@@ -3,7 +3,7 @@ export const projects = [
     name: "Shortly-link-shortener ",
     description:
       "Encurtador de links com ranqueamento de usuários em tempo real.",
-    href: "shortly-cauayves.vercel.app",
+    href: "https://shortly-cauayves.vercel.app",
   },
   {
     name: "BuzzQuizz",
@@ -22,5 +22,11 @@ export const projects = [
     description:
       "Landing page para promoção de placas de vídeo Nvidia RTX série 40.",
     href: "https://cauayves.github.io/geforce/",
+  },
+  {
+    name: "R2-file-uploader",
+    description:
+      "API para upload de arquivos para serviço cloudflare R2 com NodeJs e ExpressJS",
+    href: "https://github.com/CauaYves/R2-file-uploader",
   },
 ];

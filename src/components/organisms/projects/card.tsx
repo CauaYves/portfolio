@@ -26,8 +26,12 @@ export default function ProjectCard({
       <h2>{name}</h2>
       <p>{description}</p>
       <div>
-        <h4>visualizar agora</h4>
-        <Link href={href}>repositório</Link>
+        <Link href={href} target="_blank">
+          <h4>visualizar agora</h4>
+        </Link>
+        <Link href={`https://github.com/CauaYves/${name}`} target="_blank">
+          repositório
+        </Link>
       </div>
     </div>
   );

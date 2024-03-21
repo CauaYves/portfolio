@@ -1,0 +1,11 @@
+.techWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.tech {
+  max-width: var(--max-width);
+  padding: var(--padding-min);
+  width: var(--max-width);
+}

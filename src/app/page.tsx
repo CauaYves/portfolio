@@ -3,7 +3,8 @@ import React from "react";
 import Main from "@/components/organisms/main";
 import AboutMe from "@/components/organisms/aboutMe";
 import Experiences from "@/components/organisms/experiences";
-import Projects from "../components/organisms/projects/index";
+import Projects from "@/components/organisms/projects";
+import Technologies from "@/components/organisms/technologies";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <AboutMe />
       <Experiences />
       <Projects />
+      <Technologies />
     </React.Fragment>
   );
 }
