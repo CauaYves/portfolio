@@ -86,4 +86,7 @@
   .deskMenu > a {
     margin: 0px 20px;
   }
+  .deskMenu > a:last-child {
+    margin-right: 0px;
+  }
 }

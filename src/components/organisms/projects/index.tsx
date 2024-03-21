@@ -1,12 +1,38 @@
 import ProjectCard from "./card";
 import styles from "./projects.module.css";
+import { projects } from "./projects.array";
 
 export default function Projects() {
+  function getRandomColor() {
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+
+    let hexR = r.toString(16).padStart(2, "0");
+    let hexG = g.toString(16).padStart(2, "0");
+    let hexB = b.toString(16).padStart(2, "0");
+
+    let hexColor = "#" + hexR + hexG + hexB;
+
+    return hexColor;
+  }
   return (
     <div className={styles.projectsWrapper}>
-      <div className={styles.projects}>
+      <div className={styles.titleContainer}>
         <h2>Projetos</h2>
-        <ProjectCard />
+      </div>
+      <div className={styles.projects}>
+        {projects.map((p) => {
+          return (
+            <ProjectCard
+              key={p.name}
+              name={p.name}
+              description={p.description}
+              href={p.href}
+              color={getRandomColor()}
+            />
+          );
+        })}
       </div>
     </div>
   );
