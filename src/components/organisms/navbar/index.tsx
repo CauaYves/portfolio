@@ -39,10 +39,7 @@ export default function NavBar() {
           <Link target="_blank" href="https://github.com/CauaYves">
             Github
           </Link>
-          <Link
-            target="_blank"
-            href="https://drive.google.com/file/d/1269CyG7JolrBLipcJORE4Mg9XMt1asnK/view"
-          >
+          <Link target="_blank" href="/cv">
             Currículo
           </Link>
         </div>
@@ -55,10 +52,7 @@ export default function NavBar() {
           <Link target="_blank" href="https://github.com/CauaYves">
             Github
           </Link>
-          <Link
-            target="_blank"
-            href="https://drive.google.com/file/d/1269CyG7JolrBLipcJORE4Mg9XMt1asnK/view"
-          >
+          <Link target="_blank" href="/cv">
             Currículo
           </Link>
         </div>
