@@ -18,9 +18,10 @@ export default function Technologies() {
           <h2 data-aos="fade-right">Tecnologias</h2>
           <p data-aos="fade-right">
             Tenho grande conhecimento com a linguagem Javascript e frameworks
-            dela, isso me permite trabalhar nos dois polos de uma aplicação, o
-            servidor e parte do cliente, o resultado desse conhecimento são
-            aplicações escaláveis, com boa UI/UX e totalmente funcionais.
+            dela, isso me permite trabalhar nos dois polos de uma aplicação, no
+            lado do servidor e no lado do cliente, o resultado desse
+            conhecimento são aplicações escaláveis, com boa UI/UX e totalmente
+            funcionais.
           </p>
           <div className={styles.graph} data-aos="fade-right">
             <Image width={400} height={280} src="/skills.svg" alt="skills" />

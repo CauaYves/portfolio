@@ -1,19 +1,71 @@
-function calCurrentXpTime(startDate: string, endDate: string) {
-  const startDaTetimestamp = new Date(startDate).getTime();
-  const endDateTimestamp = new Date(endDate).getTime();
+function calculateMonthDifference(
+  currentMonthYear: string,
+  previousMonthYear: string
+) {
+  function monthToNumber(month: string) {
+    const monthsMap = {
+      january: 0,
+      february: 1,
+      march: 2,
+      april: 3,
+      may: 4,
+      june: 5,
+      july: 6,
+      august: 7,
+      september: 8,
+      october: 9,
+      november: 10,
+      december: 11,
+    };
+    //@ts-ignore
+    return monthsMap[month.toLowerCase()];
+  }
 
-  const currentXpTimestamp = endDateTimestamp - startDaTetimestamp;
-  const dataTimestamp = Number(new Date(currentXpTimestamp));
+  const [currentMonth, currentYear] = currentMonthYear.toLowerCase().split(" ");
+  const [previousMonth, previousYear] = previousMonthYear
+    .toLowerCase()
+    .split(" ");
 
-  const dataAtual = Number(new Date());
+  const currentMonthNumber = monthToNumber(currentMonth);
+  const previousMonthNumber = monthToNumber(previousMonth);
 
-  const diferencaMilissegundos = dataAtual - dataTimestamp;
+  const totalMonthsCurrentYear =
+    parseInt(currentMonthNumber) + parseInt(currentYear) * 12;
 
-  const milissegundosPorMes = 1000 * 60 * 60 * 24 * 30.4375;
-  const mesesPassados = diferencaMilissegundos / milissegundosPorMes;
-  return `${mesesPassados.toPrecision(1)}`;
+  const totalMonthsPreviousYear =
+    parseInt(previousMonthNumber) + parseInt(previousYear) * 12;
+
+  const monthDifference = totalMonthsCurrentYear - totalMonthsPreviousYear;
+
+  return monthDifference;
 }
 
+const date = new Date();
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+const currentMonth = date.getMonth();
+const extenseMonth = months[currentMonth];
+const currentYear = date.getFullYear();
+const currentXpTime = calculateMonthDifference(
+  "October 2023",
+  `${extenseMonth} ${currentYear}`
+);
+let atualXpOnLastJob = currentXpTime;
+if (currentXpTime < 0) {
+  atualXpOnLastJob *= -1;
+}
 export const xp = [
   {
     id: 1,
@@ -42,7 +94,7 @@ export const xp = [
     company: "Erudir Tech",
     startDate: "nov 2023",
     endDate: "cargo atual",
-    currentXpTime: "5 meses",
+    currentXpTime: atualXpOnLastJob + " meses",
     description:
       "Desenvolvimento de software voltado para projetos de cultura da cidade de Barra mansa que visam pôr em vigor a lei Paulo gustavo e Aldir Blanc, projeto voltado totalmente para o desenvolvimento de cultura e educação.      Tomada de decisões diretas em relação a projetos e desenvolvimento.                                          Uso de metodologia SCRUM para gerenciamento de tarefas.                                                          Tecnologias usadas: React.Js, Typescript, Next.Js, PostgreSQL, Node.Js, Express.Js",
   },
