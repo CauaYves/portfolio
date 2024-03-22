@@ -1,10 +1,17 @@
+"use client";
 import ProjectCard from "./card";
 import styles from "./projects.module.css";
 import { projects } from "./projects.array";
 import Link from "next/link";
 import UnderConstruction from "./underConstruction";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function Projects() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   function getRandomColor() {
     let r = Math.floor(Math.random() * 256);
     let g = Math.floor(Math.random() * 256);
@@ -21,7 +28,7 @@ export default function Projects() {
   return (
     <div className={styles.projectsWrapper}>
       <h2>Projetos</h2>
-      <div className={styles.projects}>
+      <div className={styles.projects} data-aos="fade-center">
         {projects.map((p) => {
           return (
             <ProjectCard

@@ -13,7 +13,7 @@ export default function Main() {
   return (
     <div className={styles.mainWrapper}>
       <main className={styles.main}>
-        <div data-aos="fade-down" className={styles.presentationWrapper}>
+        <div data-aos="fade-right" className={styles.presentationWrapper}>
           <h1 className={styles.presentationText}>
             Transformando idéias em{" "}
             <span className={styles.promotedText}>soluções</span>, linha por
