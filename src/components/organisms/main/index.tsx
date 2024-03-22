@@ -19,7 +19,9 @@ export default function Main() {
             <span className={styles.promotedText}>soluções</span>, linha por
             linha, <br /> no front-end e no back-end.
           </h1>
-          <SubPresentationText />
+          <div className={styles.subPresentationWrapper}>
+            <SubPresentationText />
+          </div>
         </div>
         <div data-aos="fade-left" className={styles.presentationImage}>
           <Image alt="Photo" src="/y.svg" width={550} height={300} priority />
