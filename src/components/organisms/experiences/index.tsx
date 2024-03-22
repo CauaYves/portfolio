@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -7,8 +7,13 @@ import styles from "./experiences.module.css";
 import ExperienceCard from "./card";
 import { xp } from "./experiences.array";
 import Arrow from "./arrow";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Experiences() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const sliderRef = useRef<Slider>(null);
   const handleNextSlide = () => {
     if (sliderRef.current) {
@@ -41,7 +46,7 @@ export default function Experiences() {
 
   return (
     <div className={styles.experienceWrapper}>
-      <div className={styles.experience}>
+      <div className={styles.experience} data-aos="fade-up">
         <h2>Experiência</h2>
         <Slider {...settings}>
           {xp.map((x) => {
