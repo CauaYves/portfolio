@@ -24,7 +24,7 @@
   text-align: left;
 }
 .subPresentationWrapper {
-  min-height: 100px;
+  min-height: 200px;
 }
 .promotedText {
   color: var(--color-one);
